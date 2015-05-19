@@ -1,0 +1,11 @@
+{
+	"index": {
+		"layout": "_layout"
+	},
+	"discover": {
+		"layout": "_layoutView"
+	},
+	"activity": {
+		"layout": "_layoutView"
+	}
+}

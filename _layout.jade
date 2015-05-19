@@ -1,0 +1,11 @@
+doctype
+html
+	head
+		link(rel="stylesheet", href="main.css")
+	body(ng-app="App")
+		!= yield
+	script(src="assets/js/lib/angular.min.js")
+	script(src="assets/js/lib/angular-route.min.js")
+	script(src="assets/js/AppService.js")
+	script(src="assets/js/AppDirective.js")
+	script(src="assets/js/app.js")
