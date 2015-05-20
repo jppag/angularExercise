@@ -1,4 +1,4 @@
-var app = angular.module('App', ['ngRoute','appService', 'appDirectives']);
+var app = angular.module('App', ['ngRoute','appService', 'appDirectives', 'routeResolverServices']);
 
 
 app.controller('AppCtrl', ['$rootScope','$scope', 'AppService', '$routeParams', function($rootScope, $scope, AppService, $routeParams) {
@@ -11,16 +11,16 @@ app.controller('AppCtrl', ['$rootScope','$scope', 'AppService', '$routeParams', 
 	
 }])
 
-.controller('InternalCtrl', ['$rootScope', '$scope', 'DiscoverService', function($rootScope, $scope, DiscoverService) {
-	var promise = DiscoverService.getDiscover();
-	promise.then(function(info) {
-		$scope.info = info.data;
-		console.log($scope.info);
-	})
-	$rootScope.select = function(item) {
-		$rootScope.selected = item;
-	}
-}])
+// .controller('InternalCtrl', ['$rootScope', '$scope', 'DiscoverService', function($rootScope, $scope, DiscoverService) {
+// 	var promise = DiscoverService.getDiscover();
+// 	promise.then(function(info) {
+// 		$scope.info = info.data;
+// 		console.log($scope.info);
+// 	})
+// 	$rootScope.select = function(item) {
+// 		$rootScope.selected = item;
+// 	}
+// }])
 
 .controller('DiscoverCtrl', ['$rootScope', '$scope', 'DiscoverService', function($rootScope, $scope, DiscoverService) {
 	var promise = DiscoverService.getDiscover();
