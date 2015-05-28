@@ -1,15 +1,24 @@
 var app = angular.module('App', ['ngRoute','appService', 'appDirectives', 'routeResolverServices']);
 
 
-app.controller('AppCtrl', ['$rootScope','$scope', 'AppService', '$routeParams', function($rootScope, $scope, AppService, $routeParams) {
+app.controller('AppCtrl', ['$rootScope','$scope', 'AppService', '$routeParams', '$location', function($rootScope, $scope, AppService, $routeParams, $location) {
 	var promise = AppService.getMenu();
 	promise.then(function(data) {
 		$rootScope.item = data.data;
 		menu = $rootScope.item.menu;
 		slug = $routeParams.path;
+		$scope.active = false;
 	});
-	
+	$scope.getElement = function(element) {
+		// console.log('CLICK: element.path: ' + element.path + ' scope.active: ' + $scope.active);
+		$scope.active = element.path;
+		// console.log('AFTER CLICK: element.path: ' + element.path + ' scope.active: ' + $scope.active);
+	};
+	// $scope.getActiveEl = function(item) {
+	// 	console.log(item.parent());
+	// }
 }])
+
 
 // .controller('InternalCtrl', ['$rootScope', '$scope', 'DiscoverService', function($rootScope, $scope, DiscoverService) {
 // 	var promise = DiscoverService.getDiscover();
@@ -17,24 +26,20 @@ app.controller('AppCtrl', ['$rootScope','$scope', 'AppService', '$routeParams', 
 // 		$scope.info = info.data;
 // 		console.log($scope.info);
 // 	})
-// 	$rootScope.select = function(item) {
-// 		$rootScope.selected = item;
-// 	}
 // }])
 
 .controller('DiscoverCtrl', ['$rootScope', '$scope', 'DiscoverService', function($rootScope, $scope, DiscoverService) {
 	var promise = DiscoverService.getDiscover();
 	promise.then(function(info) {
 		$scope.info = info.data;
-		// console.log($scope.info);
 	})
+
 }])
 
 .controller('ActivityCtrl', ['$rootScope', '$scope', 'ActivityService', function($rootScope, $scope, ActivityService) {
 	var promise = ActivityService.getActivity();
 	promise.then(function(info) {
 		$scope.info = info.data;
-		console.log($scope.info);
 	})
 }])
 
@@ -51,8 +56,8 @@ app.controller('AppCtrl', ['$rootScope','$scope', 'AppService', '$routeParams', 
 		// 	templateUrl: 'inner.html',
 		// 	controller: 'InternalCtrl'
 		// })
-		.when('/discover', {
-			templateUrl: 'discover.html',
+		.when('/welcome', {
+			templateUrl: 'welcome.html',
 			controller: 'DiscoverCtrl'
 		})
 		.when('/activity', {

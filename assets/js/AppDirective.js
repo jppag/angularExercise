@@ -22,7 +22,7 @@ angular.module('appDirectives', [])
 	.directive('sublist', function() {
 		return {
 			restrict: 'E',
-			template: '<li ng-repeat="item in item.menu" status=\"{{item.status}}\" route=\"{{item.route}}\" class="menu-item"><a href=\"#/{{item.path}}\" ng-click="select(item)">{{item.text}}</a><list ng-if="item.status == \'dropdown\'"></list></li>'	
+			template: '<li ng-repeat="item in item.menu" status=\"{{item.status}}\" route=\"{{item.route}}\" class="menu-item"><a href=\"#/{{item.path}}\" ng-class="{active: active==item.route}" ng-click="getElement(item); getActiveEl(item)">{{item.text}}</a><list ng-if="item.status == \'dropdown\'"></list></li>'
 		};
 	})
 
