@@ -1,9 +1,55 @@
 .container(ng-controller="AppCtrl")
-	nav
-		list
-	main
-		div(ng-view)
+	aside.left.l-sidebar
+		//- list
+	main.l-main
+		.row
+			h1 Browse
 
-	footer
-		.subnav-container(subnavigation)
+		section.section.row
+			ul.tabs
+				li.left.tabs-item
+					a.tabs-item-link(href="#") Overview
+				li.left.tabs-item
+					a.tabs-item-link(href="#") Charts
+				li.left.tabs-item
+					a.tabs-item-link(href="#") Genres & Moods
+				li.left.tabs-item
+					a.tabs-item-link(href="#") New Releases
+				li.left.tabs-item
+					a.tabs-item-link(href="#") News
+				li.left.tabs-item
+					a.tabs-item-link(href="#") Discover
+				.clearfix
+
+		section.section.row
+			.carousel
+				h5.description= pageDescription
+				.carousel-nav
+					a.carousel-nav-item(href="#") v
+					a.carousel-nav-item(href="#") v
+				ul.cards-list.small-block-grid-6
+					each card in cardPlaylist
+						li.card-item
+							img.card-image(src="assets/images/#{card.cardImage}")
+							.card
+								p.card-title= card.cardTitle
+								p.card-description= card.cardDescription
+
+		section.section.row
+			ul.recommendations-list.small-block-grid-3
+				each recommendation in recommendations
+					li.card-item.recommendations-card
+						.card
+							img.card-image.recommendations-card-image(src="assets/images/#{recommendation.cardImage}")
+							p.card-title.recommendations-card-title= recommendation.cardTitle
+							p.card-description.recommendations-card-description= recommendation.cardDescription
+
+		section.section.row
+			h5.section-title= genresTitle
+			ul.genres-list.small-block-grid-6
+				each genre in genres
+					li.genre
+						img.genre-bg(src="#{genre.genreBg}")
+						a.genre-title(href="#")= genre.genreName
+						i.genre-icon(class="icon-#{genre.genreIcon}")
 

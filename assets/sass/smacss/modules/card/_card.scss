@@ -1,0 +1,21 @@
+.card {
+	padding: 10px;
+	margin-top: -3px;
+	background: $dark-grey;
+}
+
+.card-image {
+	width: 100%;
+}
+
+.card-title {
+	margin-bottom: 10px;
+}
+
+.card-description {
+	color: $graffiti;
+	margin-bottom: 20px;
+	font-size: 12px;
+	letter-spacing: 0.01em;
+	line-height: 1.2;
+}

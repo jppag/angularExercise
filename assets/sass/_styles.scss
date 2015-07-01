@@ -1,0 +1,39 @@
+
+
+@import "smacss/base/_variables.scss";
+@import "smacss/base/_base.scss";
+@import "smacss/base/_reset.scss";
+@import "smacss/base/_type.scss";
+@import "smacss/layout/_main.scss";
+@import "smacss/layout/_sidebar.scss";
+@import "smacss/modules/genres/_genres.scss";
+@import "smacss/modules/carousel/_carousel.scss";
+@import "smacss/modules/playlist-card/_playlist-card.scss";
+@import "smacss/modules/card/_card.scss";
+@import "smacss/modules/recommendations/_recommendations.scss";
+@import "smacss/modules/tabs/_tabs.scss";
+
+
+list {
+	> .main-menu {
+		> sublist {
+			display: flex;
+			li {
+				margin: 0 20px;
+			}
+		}
+	}
+}
+
+
+.menu-item {
+	> list {
+		> .main-menu sublist {
+			flex-direction: column;
+		}
+	}
+}
+
+.active {
+	background: #D34E47;
+}

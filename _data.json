@@ -1,6 +1,75 @@
 {
 	"index": {
-		"layout": "_layout"
+		"layout": "_layout",
+		"pageDescription": "Nesse 1 ano de Spotify Brasil, vocês ouviram mais de 200 milhões de horas de música!",
+		"cardPlaylist": [
+			{
+				"cardTitle": "We <3 MJ",
+				"cardDescription": "In honor of his memory, here's all your favorite Michael Jackson songs in one place.",
+				"cardImage": "imagem-1.jpg"
+			},
+			{
+				"cardTitle": "We <3 MJ",
+				"cardDescription": "In honor of his memory, here's all your favorite Michael Jackson songs in one place.",
+				"cardImage": "imagem-2.jpg"
+			},
+			{
+				"cardTitle": "We <3 MJ",
+				"cardDescription": "In honor of his memory, here's all your favorite Michael Jackson songs in one place.",
+				"cardImage": "imagem-3.jpg"
+			},
+			{
+				"cardTitle": "We <3 MJ",
+				"cardDescription": "In honor of his memory, here's all your favorite Michael Jackson songs in one place.",
+				"cardImage": "imagem-4.jpg"
+			},
+			{
+				"cardTitle": "We <3 MJ",
+				"cardDescription": "In honor of his memory, here's all your favorite Michael Jackson songs in one place.",
+				"cardImage": "imagem-5.jpg"
+			},
+			{
+				"cardTitle": "We <3 MJ",
+				"cardDescription": "In honor of his memory, here's all your favorite Michael Jackson songs in one place.",
+				"cardImage": "imagem-6.jpg"
+			}
+		],
+		"recommendations": [
+			{
+				"cardImage": "reco-1.jpg",
+				"cardTitle": "Charts",
+				"cardDescription": "Global Top 50, Brazil, Top 50, Brazil, Viral 50" 
+			},
+			{
+				"cardImage": "reco-2.jpg",
+				"cardTitle": "New Releases",
+				"cardDescription": "Magloire, Chico Cesar, Erasmo Carlos" 
+			},
+			{
+				"cardImage": "reco-3.jpg",
+				"cardTitle": "Discover",
+				"cardDescription": "Recommended for you" 
+			}
+		],
+		"genresTitle": "Genres & Moods",
+		"genres": [
+			{
+				"genreName": "Latino",
+				"genreBg": "latino.png",
+				"genreIcon": "latino"
+			},
+			{
+				"genreName": "Party",
+				"genreBg": "party.png",
+				"genreIcon": "party"
+			},
+			{
+				"genreName": "Mood",
+				"genreBg": "mood.png",
+				"genreIcon": "mood"
+			}
+		]
+
 	},
 	"discover": {
 		"layout": "_layoutView"

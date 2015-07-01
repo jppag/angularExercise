@@ -1,0 +1,20 @@
+.tabs {
+	width: 100%;
+	border-bottom: 1px solid #212225;
+}
+
+.tabs-item {
+	color: #68696A;
+	margin: 20px 30px 10px 0;
+	&:hover {
+		color: #fff;
+	}
+}
+
+.tabs-item-link {
+	color: currentColor;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
